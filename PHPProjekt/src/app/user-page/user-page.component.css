@@ -1,0 +1,12 @@
+form input{
+  margin: auto;
+  width: 50%;
+}
+
+form input .halfInput{
+  width: 1000px;
+}
+
+delete{
+  margin-bottom: 50px;
+}
