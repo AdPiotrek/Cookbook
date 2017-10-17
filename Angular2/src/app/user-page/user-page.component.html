@@ -1,0 +1,64 @@
+<section class="main items">
+  <article class="item" *ngFor="let recipe of recipes">
+    <header>
+      <a href="#"><img [src]="recipe.url" alt="" /></a>
+      <h3>{{recipe.name}}</h3>
+      {{recipe.ingredients}}
+    </header>
+    <p>{{recipe.description}}</p>
+    <ul>
+      <li *ngFor="let ingr of recipe.ingredients">
+        {{ingr.name}} = {{ingr.amount}}
+      </li>
+    </ul>
+
+  </article>
+</section>
+
+<hr>
+
+<section id="intro" class="main">
+  <span class="icon fa-book major"></span>
+  <h2></h2>
+  <p>Tutaj dodawaj nowe przepisy do swojej kolekcji, zostanie on automatycznie zapisany, <br>
+    a Ty będziesz go widział po zalogowaniu na swoje konto</p>
+  <ul class="actions">
+    <li><i class="button big" type="button" (click)="isAddedButtonEnabled = !isAddedButtonEnabled">Dodaj nowy przepis</i></li>
+  </ul>
+  <div id="recipeAdd" *ngIf="isAddedButtonEnabled">
+      <div class="halfInput">
+        <label for="name">Podaj nazwę przepisu</label>
+        <input   type="text" id="name" [(ngModel)]="recipe.name">
+      </div>
+
+      <div class="halfInput">
+        <label for="photo">Podaj link do zdjecia</label>
+        <input type="text" id="photo" [(ngModel)]="recipe.url">
+      </div>
+    <hr>
+    <hr>
+
+    <div class="halfInput" *ngFor="let ingredient of recipe.ingredients">
+      <label [for]="ingredient.name">Podaj nazwę skladnika</label>
+      <input   type="text" [id]="ingredient.name" [(ngModel)]="ingredient.name">
+      <label [for]="ingredient.amount">Podaj ilość składnika</label>
+      <input type="text" [id]="ingredient.amount" [(ngModel)]="ingredient.amount">
+      <br>
+      <hr>
+      <br>
+    </div>
+
+      <br>
+        <p>Dodaj składnik</p>
+      <div class="icon fa-plus major" (click)="addIngredient()"></div>
+      <h5>Sposób przyrządzenia</h5>
+    <textarea rows="4" cols="50" [(ngModel)]="recipe.description"></textarea>
+    <br><br>
+    <button (click)="sendRecipe()">Dodaj przepis</button>
+
+
+  </div>
+</section>
+
+
+

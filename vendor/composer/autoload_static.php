@@ -20,6 +20,10 @@ class ComposerStaticInite2efafe648f6b63d61cbc2c43dcc8f8b
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
+        'M' => 
+        array (
+            'Medoo\\' => 6,
+        ),
         'I' => 
         array (
             'Interop\\Container\\' => 18,
@@ -42,6 +46,10 @@ class ComposerStaticInite2efafe648f6b63d61cbc2c43dcc8f8b
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Medoo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/catfan/medoo/src',
         ),
         'Interop\\Container\\' => 
         array (

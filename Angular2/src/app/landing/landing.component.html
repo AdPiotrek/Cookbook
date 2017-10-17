@@ -1,0 +1,37 @@
+<section id="intro" class="main" *ngIf='router.url == "/"'>
+  <span class="icon fa-user major"></span>
+  <h2>Zarejestruj się !</h2>
+  <p>Dołacz do grona użytkowników aplikacji cookbook. <br />
+    Pozwoli Ci to na tworzenie oraz na zapisywanie swoich przepisów gdziekolwiek jesteś.</p>
+  <ul class="actions">
+    <li><a class="button big" routerLink="registration">Rejestracja</a></li>
+  </ul>
+    <p>Masz już konto? <a routerLink="/login"><b style="padding-left: 10px">Zaloguj się !</b></a></p>
+
+</section>
+
+
+<router-outlet></router-outlet>
+
+<section class="main items">
+  <article class="item">
+    <header>
+      <a href="#"><img src="https://i.ytimg.com/vi/Hzp_rZxIxxE/maxresdefault.jpg" alt="" /></a>
+      <h3>Feugiat et faucibus</h3>
+    </header>
+    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+    <ul class="actions">
+      <li><a href="#" class="button">More</a></li>
+    </ul>
+  </article>
+  <article class="item">
+    <header>
+      <a href="#"><img src="images/pic02.jpg" alt="" /></a>
+      <h3>Blandit adipiscing</h3>
+    </header>
+    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
+    <ul class="actions">
+      <li><a href="#" class="button">More</a></li>
+    </ul>
+  </article>
+</section>

@@ -1,0 +1,27 @@
+<section id="intro" class="main" *ngIf="user != null">
+  <div>
+    <h3>Zarejestruj się </h3>
+    <label for="imie">Podaj swoje imie</label>
+    <input type="text" id="imie" [(ngModel)]="user.firstName" #ctrl="ngModel" (input)="isValidInput()">
+    <label for="nazwisko">Podaj swoje nazwisko</label>
+    <input type="text" id="nazwisko" [(ngModel)]="user.lastName" #ctrl="ngModel" (input)="isValidInput()">
+    <label for="email">Podaj swój email</label>
+    <input type="text" id="email" [(ngModel)]="user.email" #ctrl="ngModel" (input)="isValidInput()">
+    <label for="password">Podaj swoje hasło</label>
+    <input type="text" id="password" [(ngModel)]="user.password" #ctrl="ngModel" (input)="isValidInput()">
+  </div>
+  <br>
+  <br>
+  <ul class="actions">
+    <li><a class="button big" [ngClass]="{disabled: !isValid}" type="button" (click)="isAvailableEmail()" >Zarejestruj</a></li>
+  </ul>
+  <div *ngIf="(isValid != null) && !(isValid)">
+    <h1 style="background: gray; border: 3px solid; border-radius: 5px">Wszystkie pola muszą być wypełnione</h1>
+  </div>
+  <div *ngIf="(availableEmail != null) && !(availableEmail)">
+    <h1 style="background: gray; border: 3px solid; border-radius: 5px">Ten email jest już zajęty <br> jeśli to Ty zaloguj się na swoje konto</h1>
+  </div>
+</section>
+<br>
+<br>
+<br>

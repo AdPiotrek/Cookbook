@@ -1,0 +1,17 @@
+<section id="intro" class="main">
+    <div>
+        <h3>Zaloguj się</h3>
+        <label for="email">Podaj swój email</label>
+        <input type="text" id="email" [(ngModel)]="user.email" #ctrl="ngModel">
+        <label for="password">Podaj swoje hasło</label>
+        <input type="password" id="password" [(ngModel)]="user.password" #ctrl="ngModel">
+    </div>
+    <br>
+    <br>
+    <ul class="actions">
+        <li><a class="button big" type="button" (click)="isGoodLogin()">Zaloguj</a></li>
+    </ul>
+</section>
+<br>
+<br>
+<br>
